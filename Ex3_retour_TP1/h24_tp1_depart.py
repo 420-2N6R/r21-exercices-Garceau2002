@@ -2,8 +2,11 @@ import os
 import csv
 os.chdir(os.path.dirname(__file__)) # Cette ligne fait que l'exécution du script aura toujours lieu dans le répertoire où il se trouve.
 
-class Etudiant: pass
-
+class Etudiant:
+    def __init__(self,id,nom:str,programme:str,notes_TP:list[int],note_EXAM:list[int]) -> None:
+        self.id =id
+        self.nom =nom
+        self.programme =programme
 class Bilan : pass
 
 def lire_CSV_notes(path) -> list[Etudiant]:
